@@ -3,7 +3,7 @@
 haremos una réplica de un parking público como los que podemos encontrar en las grandes ciudades. Reproduciendo un sistema de pago e identificación de matrículas, de señalización de plazas libres, y acceso mediante semáforos coordinados con los de la calle en la que se encuentre el acceso al parking. Además le daremos un toque más tecnológico implementando un sistema de ayuda al aparcamiento conformado tanto por leds como por advertencias sonoras. 
 
 ## Integrantes del equipo
-
+pablo moreno martín, MMPablo
 
 ## Objetivos del trabajo
 
