@@ -1,0 +1,11 @@
+La idea de nuestro parking público es que desde una vía de circulación pública se puede acceder a un parking, el cual hemos domotizado con algunas aplicaciones de hardware que mejoran y facilitan el uso del mismo por el usuario.
+
+•	Lo primero que controlaremos mediante semáforos será tanto la circulación por la vía pública como la salida del parking y así permitir también el paso a peatones cuando sea necesario. Para ello emplearemos leds y pulsadores.
+
+•	Por otro lado también vamos a crear facilidades al usuario a la hora de estacionar su vehículo de varias maneras:
+
+1.	Dispondremos de un sistema de detección del coche así como la emisión de un sonido para facilitar el aparcamiento. Para ello utilizaremos sensores ultrasonidos y un speaker.
+2.	También dispondremos de leds que en función de si se detecta un coche o no se encenderán en rojo o en verde.
+3.	Y por último un sistema de guiado para el conductor de manera que le lleve a la plaza de aparcamiento más cercana. Para ello utilizaremos una pantalla LCD.
+
+•	La ultima implementación que haremos será la barrera tanto de entrada como de salida para el control de aforo y de tránsito de vehículos. Para ello utilizaremos servomotores.
