@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include <string.h>
+#include <windows.h>
+#define N 200
+struct coche
+{
+	char matricula[6];
+	char marca[50];
+	int año,horas;
+
+};
+
+float seleccionarprecio(int horas, char diasemana[]);
+
+int main()
+{
+	struct coche park[N];
+	int *p, correcto, intento, i, flag = 0, posicion,plazas[N];
+	char pass[10],diasemana[30];
+	const char contra[] = "A309";
+	//contraseña para inicializar el parking
+	{
+		intento = 1;
+		correcto = 0;
+		printf("Introduce la password \n");
+		gets_s(pass);
+		if (strcmp(pass, contra) == 0) correcto = 1;
+		while ((correcto == 0) && (intento < 3))
+		{
+			intento++;
+			printf("Contrasena incorrecta. %i intento: \n", intento);
+			gets_s(pass);
+			if (strcmp(pass, contra) == 0) correcto = 1;
+		}
+		if (correcto == 0) printf("Has fallado los tres intentos, llamame al telefono 666 666 666\n\n");
+		else
+		{
+			printf("Clave generada correctamente!\n\n ");
+		}
+	}
+
+	for (i = 0; i < 5000; i++)
+	{
+		printf("Hola, bienvenidos al parking, introduzca su matricula\n");
+		scanf_s("%s", park[i].matricula);
+		printf("que marca de coche es?\n");
+		scanf_s("%s", park[i].marca);
+		//revision 
+		printf("chequearemos si esta lleno\n");
+		p = plazas;
+		for (i = 0; i < N; i++)  //hay que perfeccionar
+		{
+			if (*p == '\0')
+			{
+				flag = -3000;
+				posicion = i;
+				p++;
+				printf("hay hueco\n");
+			}
+		}
+		//precio
+		printf("que dia es?");
+		scanf_s("%s", diasemana);
+		printf("cuantas horas?");
+		scanf_s("%d", park[i].horas);
+
+
+		printf("le va a costar %f, disfrute la estancia\n", seleccionarprecio(park[i].horas, diasemana));
+		//guardar en ficheros
+	}
+
+}
+
+float seleccionarprecio(int horas, char diasemana[])  //falta determinar precios
+{
+	float precio = 0;
+	if (diasemana == 'lunes' && diasemana == 'martes' && diasemana == 'miercoles' && diasemana == 'jueves')
+	{
+		if (horas < 5)
+		{
+
+		}
+		else if (horas > 5 && horas < 10)
+		{
+
+		}
+		else if (horas > 10)
+		{
+
+		}
+	}
+	else if (diasemana == 'viernes' && diasemana == 'sabado' && diasemana == 'domingo')
+	{
+		if (horas < 5)
+		{
+
+		}
+		else if (horas > 5 && horas < 10)
+		{
+
+		}
+		else if (horas > 10)
+		{
+
+		}
+	}
+	return precio;
+}
