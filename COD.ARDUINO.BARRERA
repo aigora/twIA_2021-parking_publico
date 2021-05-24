@@ -1,0 +1,28 @@
+//este codigo en ARDUINO se basa en una inicializacion de los tres componentes del circuito (PIR, servomotor y led) y su correcto funcionamiento.
+//Será una de las tres partes del hardware del parking
+
+#include <Servo.h>
+int PIR=4;
+int LED=6;
+Servo barrera;
+void setup() {
+barrera.attach(2);
+pinMode(PIR,INPUT);
+pinMode(LED,OUTPUT);
+}
+void loop() {
+ 
+int entrada=digitalRead(PIR);
+ 
+ if(entrada==HIGH)
+ {
+  barrera.write(-90);
+  digitalWrite(LED,HIGH);
+  delay(7000);
+ }
+else
+{
+  barrera.write(0);
+    digitalWrite(LED,LOW);
+}
+}
